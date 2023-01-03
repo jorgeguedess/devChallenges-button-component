@@ -1,4 +1,4 @@
-<h1 align="center">Portfolio Master</h1>
+<h1 align="center">Button Component</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -6,15 +6,15 @@
 
 <div align="center">
   <h3>
-    <a href="https://devchallenges.io/solutions/NUT6oPMG9629YevT6fOZ">
+    <a href="https://jorge-guedes-button-component.netlify.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://jorgeguedes-edie-homepage.netlify.app/">
+    <a href="https://devchallenges.io/solutions/DKvn8ARiJmKeDDmAXhXZ">
       Solution
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/xobQBuf8zWWmiYMIAZe0">
+    <a href="https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY">
       Challenge
     </a>
   </h3>
@@ -55,4 +55,3 @@ This application/site was created as a submission to a [DevChallenges](https://d
 ## Contact
 
 - GitHub [@Jorge-Guedes](https://github.com/Jorge-Guedes)
-- Gmail []
