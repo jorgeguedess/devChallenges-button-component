@@ -1,0 +1,181 @@
+:root {
+  --color-button: #3f3f3f;
+  --bg-button: #e0e0e0;
+  --border-color-button: transparent;
+}
+
+.tag,
+.info {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 0.9rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+  word-break: break-all;
+}
+
+@media (max-width: 40rem) {
+  .tag,
+  .info {
+    font-size: clamp(0.5rem, 5vw, 0.7rem);
+  }
+}
+
+.tag {
+  color: #333;
+}
+.info {
+  color: #828282;
+}
+
+.containerBtn {
+  padding: 0.4rem;
+}
+
+/* Button Default */
+.button {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-button);
+
+  background-color: var(--bg-button);
+  box-shadow: 0 2px 3px rgba(51, 51, 51, 0.2);
+  outline: 0;
+  border: 1px solid transparent;
+  border-color: var(--border-color-button);
+  border-radius: 0.375rem;
+  padding-block: clamp(0.25rem, 4vw, 0.5rem);
+  padding-inline: clamp(0.5rem, 8vw, 1rem);
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: clamp(0.6rem, 4vw, 1rem);
+
+  display: flex;
+  align-items: center;
+}
+.button:hover,
+.button:focus,
+.button.active {
+  --bg-button: #aeaeae;
+  transform: scale(1.05);
+}
+
+/* Button Variant */
+.outline {
+  background-color: transparent;
+  color: #3d5afe;
+  border-color: #3d5afe;
+}
+.outline:hover,
+.outline:focus,
+.outline.active {
+  background-color: rgba(41, 98, 255, 0.1);
+}
+.text {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: #3d5afe;
+}
+.text:hover,
+.text:focus,
+.text.active {
+  background-color: rgba(41, 98, 255, 0.1);
+}
+
+/* Button Disabled */
+.disabled {
+  background: #e0e0e0;
+  color: #9e9e9e;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.disabled:hover,
+.disabled:focus {
+  transform: initial;
+}
+.disabled.text,
+.disabled.text {
+  background: none;
+}
+.disabledShadow {
+  box-shadow: none;
+}
+
+/* Button Icon */
+.startIcon,
+.endIcon {
+  width: 1rem;
+  height: 1rem;
+}
+.startIcon > svg,
+.endIcon > svg {
+  width: inherit;
+  height: inherit;
+  fill: #fff;
+}
+.startIcon {
+  margin-right: .625rem;
+}
+.endIcon {
+  margin-left: .625rem;
+}
+
+/* Button Size */
+.sm {
+  padding: 0.375rem 0.75rem;
+}
+.md {
+  padding: 0.5rem 1rem;
+}
+.lg {
+  padding: 0.68rem 1.375rem;
+}
+
+/* Button Color */
+.primary {
+  background-color: #345afe;
+  color: #fff;
+}
+.primary:hover,
+.primary:focus,
+.primary.active {
+  background-color: #0039cb;
+}
+.default {
+  background-color: var(--bg-button);
+}
+.default:hover,
+.default:focus,
+.default.active {
+  --bg-button: #aeaeae;
+}
+.secondary {
+  background-color: #455a64;
+  color: #fff;
+}
+.secondary:hover,
+.secondary:focus,
+.secondary.active {
+  background-color: #1c313a;
+}
+.danger {
+  background-color: #d32f2f;
+  color: #fff;
+}
+.danger:hover,
+.danger:focus,
+.danger.active {
+  background-color: #9a0007;
+}
+
+.danger {
+  background: #9a0007;
+}
+
+.secondary {
+  background-color: #455a64;
+  color: #fff;
+}
