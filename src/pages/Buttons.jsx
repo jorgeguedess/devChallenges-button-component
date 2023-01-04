@@ -1,20 +1,32 @@
+import React from "react";
+
 import Head from "../Components/Helper/Head";
 import Button from "../Components/Button/Button";
 import Footer from "../Components/Footer";
 
 import styles from "../pages/Buttons.module.css";
+import InputSelect from "../Components/InputSelect";
+import InputBox from "../Components/InputBox";
+
+import useForm from "../Hooks/useForm";
 
 const Buttons = () => {
+  const variant = useForm();
+  const disabled = useForm();
+  const shadow = useForm();
+  const color = useForm();
+  const size = useForm();
+
   return (
     <main className={styles.Buttons}>
       <Head title="Buttons" />
-      <h1 className={styles.title}>Buttons</h1>
+      <h1 className="title">Buttons</h1>
       <section className={styles.menuButtons}>
         <Button classGrid="column_2" />
         <Button active classGrid="column_2" />
         <Button variant="outline" classGrid="column_2" />
         <Button variant="outline" active classGrid="column_2" />
-        <Button variant="text" classGrid="column_2" />
+        <Button variant="text" disabledShadow classGrid="column_2" />
         <Button variant="text" active classGrid="column_2" />
         <Button disabledShadow color="primary" classGrid="column_4" />
         <Button text="Disabled" disabled classGrid="column_2" />
@@ -46,7 +58,7 @@ const Buttons = () => {
         <Button color="secondary" visibleText="false" active />
         <Button color="danger" visibleText="false" active />
       </section>
-      <p className={styles.ref}>
+      <p className="ref">
         Icons:{" "}
         <a
           href="https://material.io/resources/icons/?style=round"
@@ -55,6 +67,30 @@ const Buttons = () => {
           https://material.io/resources/icons/?style=round
         </a>
       </p>
+
+      <section className={styles.customizeButton}>
+        <h2 className="title">Customize</h2>
+        <div className={styles.buttonGenerate}>
+          <Button
+            hiddenTag
+            variant={variant.value}
+            disabledShadow={!shadow.box}
+            disabled={disabled.box}
+            color={color.value}
+            size={size.value}
+          />
+        </div>
+        <div className={styles.containerInputs}>
+          <InputSelect label="variant" {...variant} variants />
+          <div className={styles.input_group}>
+            <InputBox label="disabled" {...disabled} />
+            <InputBox label="shadow" {...shadow} />
+          </div>
+          <InputSelect label="color" {...color} colors />
+          <InputSelect label="size" {...size} sizes />
+        </div>
+      </section>
+
       <Footer />
     </main>
   );
