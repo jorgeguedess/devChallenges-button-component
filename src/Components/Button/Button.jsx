@@ -6,12 +6,13 @@ import gridBtn from "./GridButton.module.css";
 const Button = ({
   classGrid,
   visibleText = false,
+  hiddenTag = false,
   label = true,
   text = "Default",
   active = false,
   variant,
-  disabledShadow,
-  disabled,
+  disabledShadow = false,
+  disabled = false,
   startIcon,
   endIcon,
   color,
@@ -24,30 +25,28 @@ const Button = ({
       }`}
     >
       <code>
-        {active
+        {active || hiddenTag
           ? ""
           : label && (
-              <p className={styles.tag}>
+              <p className="tag">
                 &lt;Button
                 {variant && ` variant="${variant}"`} {disabled && " disabled"}
-                {disabledShadow && "disableShadow "}{" "}
+                {!variant && disabledShadow && "disableShadow "}{" "}
                 {color && !size && visibleText && ` color="${color}"`}{" "}
                 {size && visibleText && ` size="${size}"`}{" "}
                 {startIcon && ` startIcon="${startIcon}"`}{" "}
                 {endIcon && ` endIcon="${endIcon}"`} /&gt;
               </p>
             )}
-        {active && !visibleText && (
-          <p className={styles.info}>&:hover, &:focus</p>
-        )}
+        {active && !visibleText && <p className="info">&:hover, &:focus</p>}
       </code>
       <button
         className={`
         ${styles.button}
         ${active === false ? "" : styles.active} 
-        ${disabled === undefined ? "" : styles.disabled} 
+        ${disabled === false ? "" : styles.disabled} 
+        ${disabledShadow === false ? "" : styles.disabledShadow}
         ${variant === undefined ? "" : styles[variant]} 
-        ${disabledShadow === undefined ? "" : styles[disabledShadow]}
         ${color === undefined ? "" : styles[color]} 
         ${size === undefined ? "" : styles[size]} 
         `}
