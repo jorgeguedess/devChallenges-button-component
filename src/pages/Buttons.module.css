@@ -61,6 +61,7 @@
 
 .input_group {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -76,6 +77,10 @@
   border: 1px solid transparent;
 }
 
+.containerInputs {
+  padding-inline: 1rem;
+}
+
 .containerInputs .input {
   display: flex;
   flex-wrap: wrap;
@@ -86,6 +91,7 @@
 .containerInputs .input select {
   color: #4f4f4f;
   flex: 1;
+  min-width: 10rem;
   width: 100%;
   border: 1px solid #ccc;
   background: transparent;
@@ -101,5 +107,19 @@
 .input label {
   color: #4f4f4f;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: clamp(.75rem, 4.5vw, 1rem);
+}
+
+@media (max-width: 28rem) {
+  .customizeButton {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  .customizeButton h2 {
+    grid-column: initial;
+  }
+  .buttonGenerate {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
