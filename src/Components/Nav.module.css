@@ -8,7 +8,6 @@
   background: #fafbfd;
   padding-block: clamp(1rem, 2vw, 2rem);
   padding-inline: clamp(1.5rem, 4vw, 3rem);
-  /* padding: 2rem 3rem; */
 }
 
 .nav {
@@ -145,12 +144,6 @@
 .navMobile.active .buttonMobile::after {
   transform: rotate(-135deg);
   top: -0.4375rem;
-}
-
-.buttonMobile:hover,
-.buttonMobile:focus {
-  border-top-color: #f7542e;
-  color: #f7542e;
 }
 
 @media (max-width: 40rem) {
