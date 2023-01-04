@@ -4,30 +4,6 @@
   --border-color-button: transparent;
 }
 
-.tag,
-.info {
-  font-family: "Ubuntu Mono", monospace;
-  font-size: 0.9rem;
-  line-height: 1;
-  font-weight: 400;
-  margin-bottom: 0.75rem;
-  word-break: break-all;
-}
-
-@media (max-width: 40rem) {
-  .tag,
-  .info {
-    font-size: clamp(0.5rem, 5vw, 0.7rem);
-  }
-}
-
-.tag {
-  color: #333;
-}
-.info {
-  color: #828282;
-}
-
 .containerBtn {
   padding: 0.4rem;
 }
@@ -117,10 +93,10 @@
   fill: #fff;
 }
 .startIcon {
-  margin-right: .625rem;
+  margin-right: 0.625rem;
 }
 .endIcon {
-  margin-left: .625rem;
+  margin-left: 0.625rem;
 }
 
 /* Button Size */
