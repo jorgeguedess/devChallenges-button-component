@@ -1,17 +1,25 @@
-import React from "react";
+import styles from '../pages/Buttons.module.css';
 
-import styles from "../pages/Buttons.module.css";
+interface InputSelectProps {
+  label: string;
+  value: string;
+  onChange: any;
+  type: 'variants' | 'colors' | 'sizes';
+}
 
-const InputSelect = ({ label, value, setValue, onChange, ...props }) => {
-  function capitalize(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+type optionType = 'small' | 'medium' | 'large';
+type optionValue = 'sm' | 'md' | 'lg' | 'default';
+
+const InputSelect = ({ label, value, onChange, type }: InputSelectProps) => {
+  function capitalize(text: string) {
+    return text.charAt(0).toUpperCase() + text.slice(1);
   }
 
-  const optionsVariant = ["default", "outline", "text"];
-  const optionsColor = ["default", "primary", "secondary", "danger"];
-  const optionsSize = ["default", "small", "medium", "large"];
+  const optionsVariant = ['default', 'outline', 'text'];
+  const optionsColor = ['default', 'primary', 'secondary', 'danger'];
+  const optionsSize = ['default', 'small', 'medium', 'large'];
 
-  function renderizeOptions(optionArray) {
+  function renderizeOptions(optionArray: any[]) {
     return optionArray.map((option) => (
       <option key={option} value={option}>
         {capitalize(option)}
@@ -19,21 +27,21 @@ const InputSelect = ({ label, value, setValue, onChange, ...props }) => {
     ));
   }
 
-  function renderizeOptionsSize(optionSizeArray) {
-    return optionSizeArray.map((optionSize) => {
-      let value;
+  function renderizeOptionsSize(optionSizeArray: any[]) {
+    return optionSizeArray.map((optionSize: optionType) => {
+      let value: optionValue;
       switch (optionSize) {
-        case "small":
-          value = "sm";
+        case 'small':
+          value = 'sm';
           break;
-        case "medium":
-          value = "md";
+        case 'medium':
+          value = 'md';
           break;
-        case "large":
-          value = "lg";
+        case 'large':
+          value = 'lg';
           break;
         default:
-          value = "default";
+          value = 'default';
           break;
       }
       return (
@@ -48,9 +56,9 @@ const InputSelect = ({ label, value, setValue, onChange, ...props }) => {
     <div className={styles.input}>
       <label htmlFor={label}>{capitalize(label)}:</label>
       <select value={value} onChange={onChange} name={label} id={label}>
-        {props.variants && renderizeOptions(optionsVariant)}
-        {props.colors && renderizeOptions(optionsColor)}
-        {props.sizes && renderizeOptionsSize(optionsSize)}
+        {type === 'variants' && renderizeOptions(optionsVariant)}
+        {type === 'colors' && renderizeOptions(optionsColor)}
+        {type === 'sizes' && renderizeOptionsSize(optionsSize)}
       </select>
     </div>
   );

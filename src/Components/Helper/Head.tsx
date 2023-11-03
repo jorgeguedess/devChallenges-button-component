@@ -1,10 +1,17 @@
-const Head = (props) => {
-  React.useEffect(() => {
-    document.title = props.title + ' | DevChallenges';
+import { useEffect } from 'react';
+
+interface HeadProps {
+  title: string;
+  description: string;
+}
+
+const Head = ({ title, description }: HeadProps) => {
+  useEffect(() => {
+    document.title = title + ' | DevChallenges';
     document
-      .querySelector('meta[name="description"]')
-      .setAttribute('content', props.description || '');
-  }, [props]);
+      ?.querySelector('meta[name="description"]')
+      ?.setAttribute('content', description || '');
+  }, [title, description]);
 
   return <></>;
 };

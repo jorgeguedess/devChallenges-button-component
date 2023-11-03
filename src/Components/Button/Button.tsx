@@ -1,14 +1,17 @@
-import { ReactComponent as ShopCart } from "../../Assets/icons/add_shopping.svg";
+import ShopCartIcon from '../../svg/AddShopping';
 
-import styles from "./Button.module.css";
-import gridBtn from "./GridButton.module.css";
+// types
+import { IButtonProps } from '../../types/button';
+
+import styles from './Button.module.css';
+import gridBtn from './GridButton.module.css';
 
 const Button = ({
   classGrid,
   visibleText = false,
   hiddenTag = false,
   label = true,
-  text = "Default",
+  text = 'Default',
   active = false,
   variant,
   disabledShadow = false,
@@ -17,24 +20,24 @@ const Button = ({
   endIcon,
   color,
   size,
-}) => {
+}: IButtonProps) => {
   return (
     <div
       className={`${styles.containerBtn} ${
-        classGrid ? gridBtn[classGrid] : ""
+        classGrid ? gridBtn[classGrid] : ''
       }`}
     >
       <code>
         {active || hiddenTag
-          ? ""
+          ? ''
           : label && (
               <p className="tag">
                 &lt;Button
-                {variant && ` variant="${variant}"`} {disabled && " disabled"}
-                {!variant && disabledShadow && "disableShadow "}{" "}
-                {color && !size && visibleText && ` color="${color}"`}{" "}
-                {size && visibleText && ` size="${size}"`}{" "}
-                {startIcon && ` startIcon="${startIcon}"`}{" "}
+                {variant && ` variant="${variant}"`} {disabled && ' disabled'}
+                {!variant && disabledShadow && 'disableShadow '}{' '}
+                {color && !size && visibleText && ` color="${color}"`}{' '}
+                {size && visibleText && ` size="${size}"`}{' '}
+                {startIcon && ` startIcon="${startIcon}"`}{' '}
                 {endIcon && ` endIcon="${endIcon}"`} /&gt;
               </p>
             )}
@@ -43,23 +46,31 @@ const Button = ({
       <button
         className={`
         ${styles.button}
-        ${active === false ? "" : styles.active} 
-        ${disabled === false ? "" : styles.disabled} 
-        ${disabledShadow === false ? "" : styles.disabledShadow}
-        ${variant === undefined ? "" : styles[variant]} 
-        ${color === undefined ? "" : styles[color]} 
-        ${size === undefined ? "" : styles[size]} 
+        ${active === false ? '' : styles.active} 
+        ${disabled === false ? '' : styles.disabled} 
+        ${disabledShadow === false ? '' : styles.disabledShadow}
+        ${variant === undefined ? '' : styles[variant]} 
+        ${color === undefined ? '' : styles[color]} 
+        ${size === undefined ? '' : styles[size]} 
         `}
       >
         {startIcon && (
           <span className={styles.startIcon}>
-            {startIcon === "local_grocery_store" ? <ShopCart /> : ""}
+            {startIcon === 'local_grocery_store' ? (
+              <ShopCartIcon size={24} />
+            ) : (
+              ''
+            )}
           </span>
         )}
         {text}
         {endIcon && (
           <span className={styles.endIcon}>
-            {endIcon === "local_grocery_store" ? <ShopCart /> : ""}
+            {endIcon === 'local_grocery_store' ? (
+              <ShopCartIcon size={24} />
+            ) : (
+              ''
+            )}
           </span>
         )}
       </button>

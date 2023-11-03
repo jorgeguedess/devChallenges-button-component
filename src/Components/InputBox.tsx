@@ -1,8 +1,12 @@
-import React from "react";
+import styles from '../pages/Buttons.module.css';
 
-import styles from "../pages/Buttons.module.css";
+interface InputBoxProps {
+  label: string;
+  box: boolean;
+  setBox: (box: boolean) => void;
+}
 
-const InputBox = ({ label, box, setBox, onChangeBox }) => {
+const InputBox = ({ label, box, setBox }: InputBoxProps) => {
   return (
     <div className={styles.input}>
       <label htmlFor={label}>

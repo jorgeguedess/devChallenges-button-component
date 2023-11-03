@@ -1,10 +1,10 @@
-import React from "react";
+import { useState } from 'react';
 
 const useForm = () => {
-  const [value, setValue] = React.useState("");
-  const [box, setBox] = React.useState(false);
+  const [value, setValue] = useState('');
+  const [box, setBox] = useState(false);
 
-  function onChange({ target }) {
+  function onChange({ target }: React.ChangeEvent<HTMLInputElement>) {
     setValue(target.value);
   }
 

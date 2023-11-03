@@ -1,31 +1,30 @@
-import React from "react";
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+import useMedia from '../Hooks/useMedia';
 
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import useMedia from "../Hooks/useMedia";
-
-import styles from "./Nav.module.css";
+import styles from './Nav.module.css';
+import { useEffect, useState } from 'react';
 
 const Nav = () => {
-  const mobile = useMedia("(max-width: 40rem)");
-  const [mobileMenu, setMobileMenu] = React.useState(true);
-  const [statusAria, setstatusAria] = React.useState(true);
-  const [aria, setAria] = React.useState("");
+  const mobile = useMedia('(max-width: 40rem)');
+  const [mobileMenu, setMobileMenu] = useState(true);
+  const [statusAria, setstatusAria] = useState(true);
+  const [aria, setAria] = useState('');
   const navigate = useNavigate();
 
-  React.useEffect(() => {
+  useEffect(() => {
     handleMenu();
   }, [navigate]);
 
   function handleMenu() {
     setMobileMenu(!mobileMenu);
     setstatusAria(!statusAria);
-    statusAria ? setAria("Abrir Menu") : setAria("Fechar Menu");
+    statusAria ? setAria('Abrir Menu') : setAria('Fechar Menu');
   }
 
   return (
     <nav
       className={`${mobile ? styles.navMobile : styles.nav} ${
-        mobileMenu !== false ? styles.active : ""
+        mobileMenu !== false ? styles.active : ''
       }`}
     >
       <Link className={styles.logo} to="/">
