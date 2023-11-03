@@ -34,7 +34,7 @@
 
 ## Overview
 
-![screenshot](./src/Assets/preview/desktop-preview.png)
+![screenshot](/public/desktop-preview.png)
 
 First project done by me using React.js, based on the challenge from the devChallenges website. Very happy with the result and I'm still more willing to dedicate myself more and more to this technology, I intend to improve it whenever necessary and I accept feedback :)
 
@@ -64,7 +64,7 @@ $ git clone https://github.com/Jorge-Guedes/devChallenges-button-component.git
 $ npm install
 
 # Run the app
-$ npm start
+$ npm run dev
 ```
 
 ## Contact
