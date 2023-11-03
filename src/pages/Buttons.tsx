@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import Head from "../Components/Helper/Head";
-import Button from "../Components/Button/Button";
-import Footer from "../Components/Footer";
+import Head from '../Components/Helper/Head';
+import Button from '../Components/Button/Button';
+import Footer from '../Components/Footer';
 
-import styles from "../pages/Buttons.module.css";
-import InputSelect from "../Components/InputSelect";
-import InputBox from "../Components/InputBox";
+import styles from '../pages/Buttons.module.css';
+import InputSelect from '../Components/InputSelect';
+import InputBox from '../Components/InputBox';
 
-import useForm from "../Hooks/useForm";
+import useForm from '../Hooks/useForm';
 
 const Buttons = () => {
   const variant = useForm();
@@ -59,7 +59,7 @@ const Buttons = () => {
         <Button color="danger" visibleText="false" active />
       </section>
       <p className="ref">
-        Icons:{" "}
+        Icons:{' '}
         <a
           href="https://material.io/resources/icons/?style=round"
           target="_blank"
