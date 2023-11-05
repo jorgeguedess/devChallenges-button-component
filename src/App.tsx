@@ -8,11 +8,11 @@ import Buttons from './pages/Buttons';
 import Inputs from './pages/Inputs';
 import Grid from './pages/Grid';
 
-import './App.css';
+import styles from './styles/App.module.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <BrowserRouter>
         <Nav />
         <Routes>

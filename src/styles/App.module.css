@@ -1,0 +1,13 @@
+.App {
+  max-width: 75rem;
+
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto 1fr;
+}
+
+@media (max-width: 40rem) {
+  .App {
+    grid-template-columns: 1fr;
+  }
+}
