@@ -1,4 +1,5 @@
 import styles from '../pages/Buttons.module.css';
+import { toCapitalize } from '../utils/toCapitalize';
 
 interface InputSelectProps {
   label: string;
@@ -11,10 +12,6 @@ type optionType = 'small' | 'medium' | 'large';
 type optionValue = 'sm' | 'md' | 'lg' | 'default';
 
 const InputSelect = ({ label, value, onChange, type }: InputSelectProps) => {
-  function capitalize(text: string) {
-    return text.charAt(0).toUpperCase() + text.slice(1);
-  }
-
   const optionsVariant = ['default', 'outline', 'text'];
   const optionsColor = ['default', 'primary', 'secondary', 'danger'];
   const optionsSize = ['default', 'small', 'medium', 'large'];
@@ -22,7 +19,7 @@ const InputSelect = ({ label, value, onChange, type }: InputSelectProps) => {
   function renderizeOptions(optionArray: any[]) {
     return optionArray.map((option) => (
       <option key={option} value={option}>
-        {capitalize(option)}
+        {toCapitalize(option)}
       </option>
     ));
   }
@@ -46,7 +43,7 @@ const InputSelect = ({ label, value, onChange, type }: InputSelectProps) => {
       }
       return (
         <option key={value} value={value}>
-          {capitalize(optionSize)}
+          {toCapitalize(optionSize)}
         </option>
       );
     });
@@ -54,7 +51,7 @@ const InputSelect = ({ label, value, onChange, type }: InputSelectProps) => {
 
   return (
     <div className={styles.input}>
-      <label htmlFor={label}>{capitalize(label)}:</label>
+      <label htmlFor={label}>{toCapitalize(label)}:</label>
       <select value={value} onChange={onChange} name={label} id={label}>
         {type === 'variants' && renderizeOptions(optionsVariant)}
         {type === 'colors' && renderizeOptions(optionsColor)}
