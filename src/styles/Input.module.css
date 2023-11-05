@@ -1,0 +1,40 @@
+.input {
+  gap: 0.3rem;
+}
+
+.input input[type='checkbox'] {
+  margin: 0;
+  font: inherit;
+  width: 1.15em;
+  height: 1.15em;
+  border: 1px solid transparent;
+}
+
+.input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.input select {
+  color: #4f4f4f;
+  flex: 1;
+  min-width: 10rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: transparent;
+  padding: 0.5rem;
+}
+
+.input select:hover,
+.input select:focus {
+  outline: 0;
+  background: rgba(221, 221, 221, 0.5);
+}
+
+.input label {
+  color: #4f4f4f;
+  font-weight: 600;
+  font-size: clamp(0.75rem, 4.5vw, 1rem);
+}
