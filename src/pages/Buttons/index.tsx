@@ -1,13 +1,13 @@
-import Head from '../Components/Helper/Head';
-import Button from '../Components/Button/Button';
-import Footer from '../Components/Footer';
+import Head from '../../Components/Helper/Head';
+import Button from '../../Components/Button/Button';
+import Footer from '../../Components/Footer';
 
 import styles from './Buttons.module.css';
 
-import InputSelect from '../Components/InputSelect';
-import InputBox from '../Components/InputBox';
+import InputSelect from '../../Components/InputSelect';
+import InputBox from '../../Components/InputBox';
 
-import useForm from '../Hooks/useForm';
+import useForm from '../../Hooks/useForm';
 
 const Buttons = () => {
   const variant = useForm();

@@ -1,5 +1,5 @@
-import Head from '../Components/Helper/Head';
-import { Maintenance } from '../Components/Helper/Maintenance';
+import Head from '../../Components/Helper/Head';
+import { Maintenance } from '../../Components/Helper/Maintenance';
 
 const Typography = () => {
   return (
