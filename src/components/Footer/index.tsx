@@ -1,9 +1,9 @@
-import styles from "./Footer.module.css";
+import styles from './Footer.module.css';
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      created by{" "}
+      created by{' '}
       <a
         href="https://github.com/Jorge-Guedes"
         target="_blank"
@@ -11,7 +11,7 @@ const Footer = () => {
         className={styles.footerLink}
       >
         Jorge-Guedes
-      </a>{" "}
+      </a>{' '}
       - devChallenges.io
     </footer>
   );

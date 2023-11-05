@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import styles from './Nav.module.css';
 import NavMenu from './NavMenu';
-import { useNav } from '../../Hooks/useNav';
+import { useNav } from '../../hooks/useNav';
 
 const Nav = () => {
   const { mobile, mobileMenu, aria, handleMenu } = useNav();

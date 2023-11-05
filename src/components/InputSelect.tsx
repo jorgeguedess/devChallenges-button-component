@@ -3,7 +3,7 @@ import { toCapitalize } from '../utils/toCapitalize';
 
 // types
 import { InputSelectProps } from '../types/input-select';
-import useInputSelect from '../Hooks/useInputSelect';
+import useInputSelect from '../hooks/useInputSelect';
 
 const InputSelect = ({ label, value, onChange, type }: InputSelectProps) => {
   const {

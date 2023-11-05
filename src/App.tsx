@@ -1,6 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
-import Nav from './Components/Nav';
+import Nav from './components/Nav';
 import Colors from './pages/Colors';
 import Typography from './pages/Typography';
 import Spaces from './pages/Spaces';
