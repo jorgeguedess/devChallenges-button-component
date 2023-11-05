@@ -5,7 +5,7 @@ import classnames from 'classnames';
 import { IButtonProps } from '../../types/button';
 
 import styles from './Button.module.css';
-import gridBtnStyles from './GridButton.module.css';
+import gridBtnStyles from '../../styles/Grid.module.css';
 
 const Button = ({
   classGrid,

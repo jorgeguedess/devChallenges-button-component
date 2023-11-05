@@ -1,4 +1,4 @@
-import styles from '../pages/Buttons.module.css';
+import styles from '../styles/Input.module.css';
 import { toCapitalize } from '../utils/toCapitalize';
 
 interface InputBoxProps {
