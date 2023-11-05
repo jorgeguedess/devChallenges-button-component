@@ -1,14 +1,16 @@
-import { useState } from 'react';
 import styles from '../pages/Buttons.module.css';
-
 import { toCapitalize } from '../utils/toCapitalize';
 
 interface InputBoxProps {
   label: string;
+  box: boolean;
+  setBox: (box: boolean) => void;
 }
 
-const InputBox = ({ label }: InputBoxProps) => {
-  const [box, setBox] = useState(false);
+const InputBox = ({ label, box, setBox }: InputBoxProps) => {
+  const handleMarkBox = () => {
+    setBox(!box);
+  };
 
   return (
     <div className={styles.input}>
@@ -18,7 +20,7 @@ const InputBox = ({ label }: InputBoxProps) => {
         name={label}
         id={label}
         checked={box}
-        onChange={() => setBox((prevBox) => !prevBox)}
+        onChange={handleMarkBox}
       />
     </div>
   );
