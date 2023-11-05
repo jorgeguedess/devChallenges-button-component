@@ -1,10 +1,11 @@
 import ShopCartIcon from '../../svg/AddShopping';
+import classnames from 'classnames';
 
 // types
 import { IButtonProps } from '../../types/button';
 
 import styles from './Button.module.css';
-import gridBtn from './GridButton.module.css';
+import gridBtnStyles from './GridButton.module.css';
 
 const Button = ({
   classGrid,
@@ -23,9 +24,10 @@ const Button = ({
 }: IButtonProps) => {
   return (
     <div
-      className={`${styles.containerBtn} ${
-        classGrid ? gridBtn[classGrid] : ''
-      }`}
+      className={classnames({
+        [styles.containerBtn]: true,
+        [gridBtnStyles.classGrid]: classGrid,
+      })}
     >
       <code>
         {active || hiddenTag
@@ -44,15 +46,15 @@ const Button = ({
         {active && !visibleText && <p className="info">&:hover, &:focus</p>}
       </code>
       <button
-        className={`
-        ${styles.button}
-        ${active === false ? '' : styles.active} 
-        ${disabled === false ? '' : styles.disabled} 
-        ${disabledShadow === false ? '' : styles.disabledShadow}
-        ${variant === undefined ? '' : styles[variant]} 
-        ${color === undefined ? '' : styles[color]} 
-        ${size === undefined ? '' : styles[size]} 
-        `}
+        className={classnames({
+          [styles.button]: true,
+          [styles.active]: active,
+          [styles.disabled]: disabled,
+          [styles.disabledShadow]: disabledShadow,
+          [styles[variant || '']]: variant,
+          [styles[color || '']]: color,
+          [styles[size || '']]: size,
+        })}
       >
         {startIcon && (
           <span className={styles.startIcon}>
