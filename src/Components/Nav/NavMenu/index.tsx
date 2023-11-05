@@ -1,31 +1,21 @@
 import { NavLink } from 'react-router-dom';
 import styles from './NavMenu.module.css';
+import { toCapitalize } from '../../../utils/toCapitalize';
 
 interface NavMenuProps {
   mobile: boolean | null;
 }
 
 const NavMenu = ({ mobile }: NavMenuProps) => {
+  const links = ['colors', 'typography', 'spaces', 'buttons', 'inputs', 'grid'];
+
   return (
     <ul id="menu" className={`${mobile ? styles.menuMobile : styles.menu}`}>
-      <li>
-        <NavLink to="colors">Colors</NavLink>
-      </li>
-      <li>
-        <NavLink to="typography">Typography</NavLink>
-      </li>
-      <li>
-        <NavLink to="spaces">Spaces</NavLink>
-      </li>
-      <li>
-        <NavLink to="buttons">Buttons</NavLink>
-      </li>
-      <li>
-        <NavLink to="inputs">Inputs</NavLink>
-      </li>
-      <li>
-        <NavLink to="grid">Grid</NavLink>
-      </li>
+      {links.map((link) => (
+        <li key={link}>
+          <NavLink to={link}>{toCapitalize(link)}</NavLink>
+        </li>
+      ))}
     </ul>
   );
 };
