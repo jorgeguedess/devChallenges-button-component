@@ -1,12 +1,11 @@
 import Head from '../Components/Helper/Head';
+import { Maintenance } from '../Components/Helper/Maintenance';
 
 const Grid = () => {
   return (
     <>
       <Head title="Grid" description="Components page dedicated to Grid" />
-      <h4 style={{ textAlign: 'center', color: '#777', margin: 'auto' }}>
-        Página Grid em manutenção...
-      </h4>
+      <Maintenance>Página Grid em manutenção...</Maintenance>
     </>
   );
 };

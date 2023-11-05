@@ -1,12 +1,11 @@
 import Head from '../Components/Helper/Head';
+import { Maintenance } from '../Components/Helper/Maintenance';
 
 const Spaces = () => {
   return (
     <>
       <Head title="Spaces" description="Components page dedicated to Spaces" />
-      <h4 style={{ textAlign: 'center', color: '#777', margin: 'auto' }}>
-        Página Spaces em manutenção...
-      </h4>
+      <Maintenance>Página Spaces em manutenção...</Maintenance>
     </>
   );
 };

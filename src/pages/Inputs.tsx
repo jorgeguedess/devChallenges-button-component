@@ -1,12 +1,11 @@
 import Head from '../Components/Helper/Head';
+import { Maintenance } from '../Components/Helper/Maintenance';
 
 const Inputs = () => {
   return (
     <>
       <Head title="Inputs" description="Components page dedicated to Inputs" />
-      <h4 style={{ textAlign: 'center', color: '#777', margin: 'auto' }}>
-        Página Inputs em manutenção...
-      </h4>
+      <Maintenance>Página Inputs em manutenção...</Maintenance>
     </>
   );
 };

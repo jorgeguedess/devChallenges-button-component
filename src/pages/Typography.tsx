@@ -1,4 +1,5 @@
 import Head from '../Components/Helper/Head';
+import { Maintenance } from '../Components/Helper/Maintenance';
 
 const Typography = () => {
   return (
@@ -7,9 +8,7 @@ const Typography = () => {
         title="Typography"
         description="Components page dedicated to Typography"
       />
-      <h4 style={{ textAlign: 'center', color: '#777', margin: 'auto' }}>
-        Página Typography em manutenção...
-      </h4>
+      <Maintenance>Página Typography em manutenção...</Maintenance>
     </>
   );
 };
