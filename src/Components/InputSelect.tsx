@@ -1,15 +1,12 @@
 import styles from '../pages/Buttons.module.css';
 import { toCapitalize } from '../utils/toCapitalize';
 
-interface InputSelectProps {
-  label: string;
-  value: string;
-  onChange: any;
-  type: 'variants' | 'colors' | 'sizes';
-}
-
-type optionType = 'small' | 'medium' | 'large';
-type optionValue = 'sm' | 'md' | 'lg' | 'default';
+// types
+import {
+  InputSelectProps,
+  optionType,
+  optionValue,
+} from '../types/input-select';
 
 const InputSelect = ({ label, value, onChange, type }: InputSelectProps) => {
   const optionsVariant = ['default', 'outline', 'text'];
