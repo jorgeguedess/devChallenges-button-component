@@ -27,7 +27,7 @@
 }
 
 .logo {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 1.5;
@@ -35,81 +35,6 @@
 }
 
 .logo span {
-  color: #f7542e;
-}
-
-.menu,
-.menuMobile {
-  list-style: none;
-}
-
-.menu {
-  margin-top: 20%;
-}
-
-.menuMobile {
-  width: 100%;
-  background: #090f31;
-  position: absolute;
-  top: var(--nav_height_mobile);
-  left: -1000px;
-  z-index: 1000;
-
-  pointer-events: none;
-  visibility: hidden;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: 0.4s ease-in-out;
-}
-
-.navMobile.active .menuMobile {
-  pointer-events: initial;
-  left: 0;
-  top: var(--nav_height_mobile);
-  visibility: visible;
-}
-
-.menu li a {
-  font-family: "Noto Sans", sans-serif;
-  color: #9e9e9e;
-  font-weight: 500;
-  transition: 0.2s;
-}
-
-.menuMobile li {
-  width: 100%;
-}
-
-.menuMobile li a {
-  padding: 0.3rem;
-  text-align: center;
-  display: block;
-  width: inherit;
-  color: #d5dbfa;
-}
-
-.menuMobile li:not(:last-child) a {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.menu li:not(:last-child) a {
-  margin-bottom: 2rem;
-  display: block;
-}
-
-.menu li a:hover,
-.menu li a:focus,
-.menu li a:global(.active) {
-  outline: none;
-  color: #090f31;
-}
-
-.menuMobile li a:hover,
-.menuMobile li a:focus,
-.menuMobile li a:global(.active) {
-  outline: none;
   color: #f7542e;
 }
 
@@ -123,7 +48,7 @@
 
 .buttonMobile::after,
 .buttonMobile::before {
-  content: "";
+  content: '';
   display: block;
   width: 1.5rem;
   height: 0.125rem;
